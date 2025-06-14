@@ -212,7 +212,7 @@ export default function Home() {
               onChange={(e) => setFilterType(e.target.value)}
             >
               <option value="">Lọc theo loại sân</option>
-              {loaiSans.map((loai) => (
+              {(Array.isArray(loaiSans) ? loaiSans : []).map((loai) => (
                 <option key={loai._id} value={loai._id}>
                   {loai.name}
                 </option>
@@ -223,7 +223,7 @@ export default function Home() {
               placeholder="Nhập tên sân, địa chỉ "
               value={filterName}
               onChange={(e) => setFilterName(e.target.value)}
-             
+
             />
             <input
               type="text"
@@ -295,7 +295,7 @@ export default function Home() {
         <section className="loaisan-container">
           <h1 className="ten">Loại sân thể thao</h1>
           <div className="loaisan-grid">
-            {loaiSans.map((loai) => (
+            {(Array.isArray(loaiSans) ? loaiSans : []).map((loai) => (
               <div
                 key={loai._id}
                 className="loaisan-item"
@@ -321,7 +321,7 @@ export default function Home() {
             {displayFields.length === 0 ? (
               <p>Không có sân để hiển thị.</p>
             ) : (
-              displayFields.map((field) => (
+              (Array.isArray(displayFields) ? displayFields : []).map((field) => (
                 <FieldCard key={field._id} field={field} user={user} />
               ))
             )}
