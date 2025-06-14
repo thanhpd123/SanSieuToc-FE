@@ -1,0 +1,196 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  /* hoặc màu nền bạn muốn */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  /* thêm bóng nhẹ cho phân biệt */
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+/* Vì navbar cố định nên phần nội dung bên dưới phải có khoảng cách trên để không bị che khuất */
+.font-sans {
+  padding-top: 70px;
+  /* độ cao navbar, bạn có thể chỉnh phù hợp */
+}
+
+
+.logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.logo .green-text {
+  color: #aaff00;
+  margin-right: 0.25rem;
+  text-shadow: 0 0 5px #aaff00;
+}
+
+.logo .white-text {
+  color: white;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+.menu {
+  display: flex;
+  gap: 1.5rem;
+  font-weight: 500;
+  font-size: 1.125rem;
+  margin-top: 0.25rem;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+}
+
+.menu a:hover {
+  text-decoration: underline;
+}
+
+.auth-search {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.25rem;
+}
+
+.auth-button {
+  background-color: white;
+  color: black;
+  padding: 0.25rem 1rem;
+  border-radius: 0.25rem;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  border: none;
+}
+
+.auth-button:hover {
+  background-color: #e5e7eb;
+}
+
+.search-input {
+  margin-left: 0.5rem;
+  padding: 0.25rem 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  font-weight: 600;
+  outline: none;
+}
+
+.search-input:focus {
+  border-color: #3b82f6;
+}
+
+.yellow-strip {
+  background-color: #f59e0b;
+  /* bg-yellow-500 */
+  height: 1.25rem;
+  width: 100%;
+}
+
+.hero {
+  position: relative;
+  height: 500px;
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Soccer_Field_-_Empty.jpg/1280px-Soccer_Field_-_Empty.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  mix-blend-mode: overlay;
+  z-index: 0;
+}
+
+.hero h1 {
+  font-size: 2.25rem;
+  font-weight: bold;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+@media (min-width: 768px) {
+  .hero h1 {
+    font-size: 3rem;
+  }
+}
+
+.hero p {
+  margin-top: 1rem;
+  font-size: 1.125rem;
+  text-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.hero p .bold {
+  font-weight: bold;
+}
+
+.search-bar {
+  background-color: white;
+  border-radius: 1rem;
+  margin-top: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 64rem;
+  display: flex;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.search-bar select,
+.search-bar input {
+  padding: 0.75rem 1rem;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+}
+
+.search-bar select {
+  width: 25%;
+  border-right: 1px solid #d1d5db;
+}
+
+.search-bar input:nth-child(2) {
+  width: 50%;
+}
+
+.search-bar input:nth-child(3) {
+  width: 25%;
+  border-left: 1px solid #d1d5db;
+}
+
+.search-bar button {
+  background-color: #166534;
+  /* tương đương bg-green-600 */
+  color: white;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s;
+}
+
+.search-bar button:hover {
+  background-color: #14532d;
+  /* hover:bg-green-700 */
+}
