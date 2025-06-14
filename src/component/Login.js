@@ -108,6 +108,7 @@ export default function Login() {
     }
   };
 
+  const API_URL = process.env.REACT_APP_API_URL || "http://localhost:3000";
   const handleRegister = async (e) => {
     e.preventDefault();
     setLoading(true);
@@ -122,7 +123,7 @@ export default function Login() {
     }
 
     try {
-      const response = await axios.post(`${process.env.REACT_APP_API_URL}/auth/register`, {
+      const response = await axios.post(`${API_URL}/auth/register`, {
         name,
         email,
         password,
