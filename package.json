@@ -22,7 +22,6 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "proxy": "https://sansieutoc-be.onrender.com",
   "eslintConfig": {
     "extends": [
       "react-app",
