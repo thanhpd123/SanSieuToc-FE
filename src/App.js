@@ -30,7 +30,7 @@ function App() {
 
   return (
     <Routes>
-      <Route path='/home' element={<Home />} />
+      <Route path='/' element={<Home />} />
       <Route path="/loaisan/6836d3231f7f6d0deb0f98d0" element={<Bongda />} />
       <Route path="/loaisan/6836d3231f7f6d0deb0f98d1" element={<Bongro />} />
       <Route path="/loaisan/6836d3231f7f6d0deb0f98d2" element={<Tennis />} />
