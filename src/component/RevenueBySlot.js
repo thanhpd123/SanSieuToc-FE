@@ -13,7 +13,7 @@ const RevenueBySlot = ({ token, startDate, endDate }) => {
       setLoading(true);
       setError("");
       try {
-        const res = await axios.get("http://localhost:3001/report/slot", {
+        const res = await axios.get("https://san-sieu-toc.vercel.app/report/slot", {
           headers: { Authorization: `Bearer ${token}` },
           params: {
             ...(startDate && { from: startDate }),
