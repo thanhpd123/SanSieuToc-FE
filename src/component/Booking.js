@@ -70,7 +70,7 @@ const Booking = () => {
   useEffect(() => {
     if (!fieldId || !formData.date) return;
     axios
-      .get(`http://localhost:3000/booking`)
+      .get(`https://sansieutoc-be.onrender.com/booking`)
       .then((res) => setBookedSlots(res.data.bookings || []))
       .catch(() => setBookedSlots([]));
   }, [fieldId, formData.date]);
@@ -251,9 +251,8 @@ const Booking = () => {
                         type="button"
                         disabled={isBooked || !user}
                         onClick={() => handleSelectCell(slot, unit)}
-                        className={`unit-btn-table ${
-                          isBooked ? "booked" : ""
-                        } ${isSelected ? "selected" : ""}`}
+                        className={`unit-btn-table ${isBooked ? "booked" : ""
+                          } ${isSelected ? "selected" : ""}`}
                       >
                         {isBooked ? "Đã đặt" : isSelected ? "Đã chọn" : "Trống"}
                       </button>
@@ -350,7 +349,7 @@ const Booking = () => {
                       <b>
                         {typeof field.pricePerHour === "number"
                           ? Math.round(field.pricePerHour).toLocaleString() +
-                            " ₫/giờ"
+                          " ₫/giờ"
                           : "Không rõ"}
                       </b>
                     </p>
@@ -386,8 +385,8 @@ const Booking = () => {
                           <div className="booking-total">
                             {formData.totalPrice
                               ? Math.round(
-                                  formData.totalPrice
-                                ).toLocaleString() + " ₫"
+                                formData.totalPrice
+                              ).toLocaleString() + " ₫"
                               : "Chưa chọn khung giờ và sân"}
                           </div>
                         </div>
